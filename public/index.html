@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emoji Suggestion from Selfie</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Your Selfie to Get Emoji Suggestions</h1>
+
+    <form id="upload-form">
+      <input type="file" id="selfie-input" accept="image/*" required />
+      <br />
+      <button type="submit">Suggest Emoji</button>
+    </form>
+
+    <div id="preview-container" class="hidden">
+      <h2>Preview:</h2>
+      <img id="preview-img" src="" alt="Selfie Preview" />
+    </div>
+
+    <div id="emoji-suggestions" class="hidden">
+      <h2>Suggested Emoji:</h2>
+      <div id="emojis"></div>
+    </div>
+
+    <div id="error-message" class="hidden"></div>
+  </div>
+
+  <!-- Load face-api.js -->
+  <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
